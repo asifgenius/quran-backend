@@ -1,0 +1,25 @@
+{
+  "name": "quran-api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Separate Node.js backend for the Quran web application",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "bun --hot src/server.ts",
+    "dev:nodemon": "nodemon --watch src --ext ts --exec \"bun src/server.ts\"",
+    "start": "bun run build && bun dist/server.js"
+  },
+  "dependencies": {
+    "@types/express": "^5.0.6",
+    "express": "^5.2.1",
+    "hono": "^4.12.14",
+    "tsx": "^4.20.6"
+  },
+  "devDependencies": {
+    "@types/node": "^24.6.0",
+    "bun-types": "^1.3.12",
+    "nodemon": "^3.1.10",
+    "typescript": "^5.9.3"
+  }
+}
